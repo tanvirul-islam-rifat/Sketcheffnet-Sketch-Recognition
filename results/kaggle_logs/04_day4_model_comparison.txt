@@ -1,0 +1,317 @@
+================================================================================
+DAY 4: ALTERNATIVE MODELS TESTING AND COMPARISON
+================================================================================
+Using device: cuda
+================================================================================
+STEP 1: Loading Processed Data
+================================================================================
+✓ Found processed data files
+Train: 70000, Val: 15000, Test: 15000
+================================================================================
+STEP 2: Preparing DataLoaders
+================================================================================
+DataLoaders ready!
+================================================================================
+STEP 3: Running Model Comparison Experiments
+================================================================================
+================================================================================
+EXPERIMENT 1: DEEP LEARNING MODELS
+================================================================================
+********************************************************************************
+Testing: Simple CNN
+********************************************************************************
+Total parameters: 2,203,506
+Trainable parameters: 2,203,506
+================================================================================
+Training SIMPLE CNN
+================================================================================
+Epoch 1: Train Acc=33.38%, Val Acc=60.50%
+Epoch 2: Train Acc=50.04%, Val Acc=67.03%
+Epoch 3: Train Acc=55.56%, Val Acc=70.15%
+Epoch 4: Train Acc=58.10%, Val Acc=71.65%
+Epoch 5: Train Acc=60.09%, Val Acc=72.50%
+Epoch 6: Train Acc=61.68%, Val Acc=73.41%
+Epoch 7: Train Acc=62.97%, Val Acc=74.05%
+Epoch 8: Train Acc=63.78%, Val Acc=75.01%
+Epoch 9: Train Acc=64.60%, Val Acc=75.07%
+Epoch 10: Train Acc=65.40%, Val Acc=75.09%
+Epoch 11: Train Acc=65.68%, Val Acc=75.93%
+Epoch 12: Train Acc=66.25%, Val Acc=76.43%
+Epoch 13: Train Acc=66.74%, Val Acc=76.16%
+Epoch 14: Train Acc=67.12%, Val Acc=76.30%
+Epoch 15: Train Acc=67.74%, Val Acc=76.53%
+Simple CNN Results:
+  Best Val Acc: 76.53%
+  Test Acc: 75.70%
+  Test F1: 75.41%
+  Training Time: 9.87 minutes
+********************************************************************************
+Testing: MobileNetV2
+********************************************************************************
+Downloading: "https://download.pytorch.org/models/mobilenet_v2-b0353104.pth" to /root/.cache/torch/hub/checkpoints/mobilenet_v2-b0353104.pth
+Total parameters: 2,287,922
+Trainable parameters: 2,287,922
+================================================================================
+Training MOBILENETV2
+================================================================================
+Epoch 1: Train Acc=63.41%, Val Acc=73.47%
+Epoch 2: Train Acc=74.05%, Val Acc=75.97%
+Epoch 3: Train Acc=76.43%, Val Acc=78.09%
+Epoch 4: Train Acc=78.10%, Val Acc=78.79%
+Epoch 5: Train Acc=79.02%, Val Acc=79.88%
+Epoch 6: Train Acc=79.92%, Val Acc=80.69%
+Epoch 7: Train Acc=80.54%, Val Acc=80.31%
+Epoch 8: Train Acc=81.34%, Val Acc=80.85%
+Epoch 9: Train Acc=81.50%, Val Acc=80.87%
+Epoch 10: Train Acc=82.04%, Val Acc=80.99%
+Epoch 11: Train Acc=82.34%, Val Acc=81.67%
+Epoch 12: Train Acc=82.92%, Val Acc=81.77%
+Epoch 13: Train Acc=83.20%, Val Acc=81.87%
+Epoch 14: Train Acc=83.70%, Val Acc=81.45%
+Epoch 15: Train Acc=83.80%, Val Acc=81.42%
+MobileNetV2 Results:
+  Best Val Acc: 81.87%
+  Test Acc: 81.07%
+  Test F1: 80.96%
+  Training Time: 10.49 minutes
+********************************************************************************
+Testing: ResNet18
+********************************************************************************
+Total parameters: 11,202,162
+Trainable parameters: 11,202,162
+================================================================================
+Training RESNET18
+================================================================================
+Epoch 1: Train Acc=65.29%, Val Acc=73.89%
+Epoch 2: Train Acc=75.11%, Val Acc=74.16%
+Epoch 3: Train Acc=77.50%, Val Acc=77.74%
+Epoch 4: Train Acc=79.36%, Val Acc=79.15%
+Epoch 5: Train Acc=80.49%, Val Acc=79.05%
+Epoch 6: Train Acc=81.76%, Val Acc=80.09%
+Epoch 7: Train Acc=82.43%, Val Acc=80.20%
+Epoch 8: Train Acc=83.31%, Val Acc=81.01%
+Epoch 9: Train Acc=83.83%, Val Acc=81.41%
+Epoch 10: Train Acc=84.79%, Val Acc=80.97%
+Epoch 11: Train Acc=85.37%, Val Acc=81.34%
+Epoch 12: Train Acc=86.25%, Val Acc=81.47%
+Epoch 13: Train Acc=87.05%, Val Acc=81.07%
+Epoch 14: Train Acc=87.77%, Val Acc=80.85%
+Epoch 15: Train Acc=88.21%, Val Acc=81.79%
+ResNet18 Results:
+  Best Val Acc: 81.79%
+  Test Acc: 81.49%
+  Test F1: 81.45%
+  Training Time: 10.47 minutes
+********************************************************************************
+Testing: ResNet34
+********************************************************************************
+Downloading: "https://download.pytorch.org/models/resnet34-b627a593.pth" to /root/.cache/torch/hub/checkpoints/resnet34-b627a593.pth
+Total parameters: 21,310,322
+Trainable parameters: 21,310,322
+================================================================================
+Training RESNET34
+================================================================================
+Epoch 1: Train Acc=63.44%, Val Acc=72.67%
+Epoch 2: Train Acc=74.91%, Val Acc=77.39%
+Epoch 3: Train Acc=78.01%, Val Acc=79.23%
+Epoch 4: Train Acc=79.90%, Val Acc=80.23%
+Epoch 5: Train Acc=81.41%, Val Acc=80.93%
+Epoch 6: Train Acc=82.23%, Val Acc=80.87%
+Epoch 7: Train Acc=83.20%, Val Acc=81.11%
+Epoch 8: Train Acc=83.98%, Val Acc=80.89%
+Epoch 9: Train Acc=84.76%, Val Acc=81.75%
+Epoch 10: Train Acc=85.64%, Val Acc=81.40%
+Epoch 11: Train Acc=86.28%, Val Acc=81.77%
+Epoch 12: Train Acc=87.10%, Val Acc=81.96%
+Epoch 13: Train Acc=87.84%, Val Acc=82.09%
+Epoch 14: Train Acc=88.49%, Val Acc=82.22%
+Epoch 15: Train Acc=89.30%, Val Acc=81.95%
+ResNet34 Results:
+  Best Val Acc: 82.22%
+  Test Acc: 81.78%
+  Test F1: 81.69%
+  Training Time: 12.60 minutes
+********************************************************************************
+Testing: DenseNet121
+********************************************************************************
+Downloading: "https://download.pytorch.org/models/densenet121-a639ec97.pth" to /root/.cache/torch/hub/checkpoints/densenet121-a639ec97.pth
+Total parameters: 7,005,106
+Trainable parameters: 7,005,106
+================================================================================
+Training DENSENET121
+================================================================================
+Epoch 1: Train Acc=68.33%, Val Acc=75.49%
+Epoch 2: Train Acc=77.35%, Val Acc=79.13%
+Epoch 3: Train Acc=79.63%, Val Acc=79.92%
+Epoch 4: Train Acc=81.12%, Val Acc=80.17%
+Epoch 5: Train Acc=82.02%, Val Acc=80.51%
+Epoch 6: Train Acc=83.17%, Val Acc=81.05%
+Epoch 7: Train Acc=83.67%, Val Acc=81.52%
+Epoch 8: Train Acc=84.44%, Val Acc=82.85%
+Epoch 9: Train Acc=85.18%, Val Acc=81.42%
+Epoch 10: Train Acc=85.93%, Val Acc=82.00%
+Epoch 11: Train Acc=86.30%, Val Acc=81.44%
+Epoch 12: Train Acc=87.25%, Val Acc=82.30%
+Epoch 13: Train Acc=87.70%, Val Acc=81.79%
+Epoch 14: Train Acc=88.40%, Val Acc=82.03%
+Epoch 15: Train Acc=88.76%, Val Acc=82.10%
+DenseNet121 Results:
+  Best Val Acc: 82.85%
+  Test Acc: 82.08%
+  Test F1: 82.02%
+  Training Time: 20.17 minutes
+********************************************************************************
+Testing: EfficientNet-B0
+********************************************************************************
+Downloading: "https://download.pytorch.org/models/efficientnet_b0_rwightman-7f5810bc.pth" to /root/.cache/torch/hub/checkpoints/efficientnet_b0_rwightman-7f5810bc.pth
+Total parameters: 4,071,598
+Trainable parameters: 4,071,598
+================================================================================
+Training EFFICIENTNET-B0
+================================================================================
+Epoch 1: Train Acc=64.50%, Val Acc=77.07%
+Epoch 2: Train Acc=76.38%, Val Acc=79.68%
+Epoch 3: Train Acc=78.95%, Val Acc=80.89%
+Epoch 4: Train Acc=80.54%, Val Acc=81.27%
+Epoch 5: Train Acc=81.49%, Val Acc=81.49%
+Epoch 6: Train Acc=82.61%, Val Acc=81.63%
+Epoch 7: Train Acc=83.34%, Val Acc=81.92%
+Epoch 8: Train Acc=83.82%, Val Acc=82.61%
+Epoch 9: Train Acc=84.34%, Val Acc=82.41%
+Epoch 10: Train Acc=85.16%, Val Acc=82.04%
+Epoch 11: Train Acc=85.59%, Val Acc=82.50%
+Epoch 12: Train Acc=86.23%, Val Acc=82.32%
+Epoch 13: Train Acc=86.64%, Val Acc=82.53%
+Epoch 14: Train Acc=87.18%, Val Acc=82.77%
+Epoch 15: Train Acc=87.69%, Val Acc=82.61%
+EfficientNet-B0 Results:
+  Best Val Acc: 82.77%
+  Test Acc: 82.63%
+  Test F1: 82.62%
+  Training Time: 12.29 minutes
+================================================================================
+EXPERIMENT 2: TRADITIONAL MACHINE LEARNING MODELS
+================================================================================
+Extracting features from images...
+Training features shape: (70000, 4096)
+Validation features shape: (15000, 4096)
+Test features shape: (15000, 4096)
+********************************************************************************
+Testing: Random Forest
+********************************************************************************
+================================================================================
+Training RANDOM FOREST
+================================================================================
+Applying PCA (reducing to 100 components)...
+Explained variance: 75.49%
+Training Random Forest...
+Training completed in 1.36 minutes
+Validation Accuracy: 45.27%
+Random Forest Results:
+  Val Acc: 45.27%
+  Test Acc: 43.93%
+  Test F1: 41.85%
+  Training Time: 1.36 minutes
+********************************************************************************
+Testing: k-NN (k=5)
+********************************************************************************
+================================================================================
+Training K-NN (K=5)
+================================================================================
+Applying PCA (reducing to 100 components)...
+Explained variance: 75.49%
+Training k-NN (k=5)...
+Training completed in 0.21 minutes
+Validation Accuracy: 44.21%
+k-NN (k=5) Results:
+  Val Acc: 44.21%
+  Test Acc: 44.50%
+  Test F1: 43.62%
+  Training Time: 0.21 minutes
+********************************************************************************
+Testing: SVM (Linear)
+********************************************************************************
+================================================================================
+Training SVM (LINEAR)
+================================================================================
+Applying PCA (reducing to 100 components)...
+Explained variance: 75.49%
+Training SVM (Linear)...
+Training completed in 4.45 minutes
+Validation Accuracy: 10.91%
+SVM (Linear) Results:
+  Val Acc: 10.91%
+  Test Acc: 10.79%
+  Test F1: 9.52%
+  Training Time: 4.45 minutes
+================================================================================
+STEP 4: Analyzing and Displaying Results
+================================================================================
+✓ Results saved to model_comparison.csv
+================================================================================
+MODEL COMPARISON TABLE
+================================================================================
+          Model           Type Parameters Val Accuracy Test Accuracy Test F1-Score Training Time (min)
+     Simple CNN  Deep Learning      2.20M       76.53%        75.70%        75.41%                9.87
+    MobileNetV2  Deep Learning      2.29M       81.87%        81.07%        80.96%               10.49
+       ResNet18  Deep Learning     11.20M       81.79%        81.49%        81.45%               10.47
+       ResNet34  Deep Learning     21.31M       82.22%        81.78%        81.69%               12.60
+    DenseNet121  Deep Learning      7.01M       82.85%        82.08%        82.02%               20.17
+EfficientNet-B0  Deep Learning      4.07M       82.77%        82.63%        82.62%               12.29
+  Random Forest Traditional ML   PCA: 100       45.27%        43.93%        41.85%                1.36
+     k-NN (k=5) Traditional ML   PCA: 100       44.21%        44.50%        43.62%                0.21
+   SVM (Linear) Traditional ML   PCA: 100       10.91%        10.79%         9.52%                4.45
+================================================================================
+STEP 5: Creating and Displaying Visualizations
+================================================================================
+📊 Visualization 1: Model Performance Comparison
+Figure(1800x800)
+✓ Saved: model_comparison.png
+📊 Visualization 2: Efficiency Analysis
+Figure(1200x800)
+✓ Saved: efficiency_comparison.png
+📊 Visualization 3: Performance Summary by Model Type
+Figure(1600x600)
+✓ Summary statistics displayed
+================================================================================
+STEP 6: Detailed Statistical Analysis
+================================================================================
+🏆 BEST OVERALL MODEL:
+   Model: EfficientNet-B0
+   Type: Deep Learning
+   Test Accuracy: 82.63%
+   Test F1-Score: 82.62%
+   Training Time: 12.29 minutes
+🥇 BEST DEEP LEARNING MODEL:
+   Model: EfficientNet-B0
+   Test Accuracy: 82.63%
+🥈 BEST TRADITIONAL ML MODEL:
+   Model: k-NN (k=5)
+   Test Accuracy: 44.50%
+⚡ FASTEST MODEL:
+   Model: k-NN (k=5)
+   Training Time: 0.21 minutes
+   Test Accuracy: 44.50%
+💎 MOST EFFICIENT MODEL (Accuracy/Time):
+   Model: k-NN (k=5)
+   Efficiency: 211.90% per minute
+   Test Accuracy: 44.50%
+   Training Time: 0.21 minutes
+📊 DEEP LEARNING vs TRADITIONAL ML:
+   Average DL Accuracy: 80.79%
+   Average ML Accuracy: 33.07%
+   Performance Gap: 47.72%
+   DL Advantage: 144.3% relative improvement
+================================================================================
+DAY 4 COMPLETED SUCCESSFULLY!
+================================================================================
+📊 Summary:
+   Models Tested: 9
+   Best Model: EfficientNet-B0
+   Best Accuracy: 82.63%
+   Best F1-Score: 82.62%
+📁 Outputs saved to: /kaggle/working/results/day4
+   - model_comparison.csv
+   - model_comparison.png
+   - efficiency_comparison.png
+================================================================================

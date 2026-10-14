@@ -1,0 +1,10 @@
+model,type,parameters,best_val_acc,test_acc,test_f1,train_minutes
+Simple CNN,Deep Learning,2203506,76.53,75.7,75.41,9.87
+MobileNetV2,Deep Learning,2287922,81.87,81.07,80.96,10.49
+ResNet18,Deep Learning,11202162,81.79,81.49,81.45,10.47
+ResNet34,Deep Learning,21310322,82.22,81.78,81.69,12.6
+DenseNet121,Deep Learning,7005106,82.85,82.08,82.02,20.17
+EfficientNet-B0,Deep Learning,4071598,82.77,82.63,82.62,12.29
+Random Forest,Traditional ML,,45.27,43.93,41.85,1.36
+k-NN (k=5),Traditional ML,,44.21,44.5,43.62,0.21
+SVM (Linear),Traditional ML,,10.91,10.79,9.52,4.45

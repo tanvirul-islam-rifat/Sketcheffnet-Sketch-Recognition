@@ -1,0 +1,15 @@
+[project]
+name = "sketcheffnet"
+version = "1.0.0"
+description = "SketchEffNet: a 1.0M-parameter depthwise-separable CNN for sketch recognition on Google QuickDraw"
+authors = [{ name = "Md. Tanvirul Islam Rifat" }]
+license = { text = "MIT" }
+requires-python = ">=3.10"
+
+[tool.ruff]
+line-length = 120
+extend-exclude = ["archive", "notebooks/archive", "notebooks/kaggle_full_run.ipynb"]
+
+[tool.ruff.lint]
+select = ["F", "E9", "B"]
+ignore = ["B905", "B023"]

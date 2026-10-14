@@ -1,0 +1,72 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  results:
+    name: Verify recorded results
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install (no PyTorch needed)
+        run: pip install numpy pandas pillow matplotlib scikit-learn tabulate ruff
+      - name: Lint
+        run: ruff check .
+      - name: Recorded results match the run log and every claim is checked
+        run: python -m tools.verify_results -v
+      - name: Analytic complexity reproduces the logged parameter counts
+        run: python -m tools.complexity
+      - name: Figures regenerate from results/
+        run: python -m tools.make_figures
+
+  pipeline:
+    name: Unit tests + end-to-end smoke run (CPU, synthetic data)
+    runs-on: ubuntu-latest
+    env:
+      QUICKDRAW_DATA_DIR: ${{ github.workspace }}/synthetic/quickdraw_data
+      IMAGENET_SKETCH_DIR: ${{ github.workspace }}/synthetic/imagenet_sketch
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Install CPU PyTorch + requirements
+        run: |
+          pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+          pip install -r requirements.txt
+      - name: Unit tests
+        run: python -m unittest discover -s tests -t . -v
+      - name: Synthetic stand-in data
+        run: python scripts/make_synthetic_data.py --out synthetic
+      - name: Dataset check
+        run: python scripts/check_dataset.py
+      - name: Day 1 - data preparation + ResNet18 baseline (smoke)
+        run: python -m experiments.day1_baseline --smoke
+      - name: Day 2 - few-shot / augmentation / transfer (smoke)
+        run: python -m experiments.day2_experiments --smoke
+      - name: Day 3 - analysis (smoke)
+        run: python -m experiments.day3_analysis --smoke
+      - name: Day 4 - model comparison incl. SketchEffNet (smoke)
+        run: python -m experiments.day4_model_comparison --smoke --with-sketcheffnet
+      - name: Day 5 - SketchEffNet (smoke)
+        run: python -m experiments.day5_sketcheffnet --smoke
+      - name: Day 6 - cross-dataset (smoke)
+        run: python -m experiments.day6_cross_dataset_imagenet_sketch --smoke
+      - name: Inference CLI on a drawing
+        run: |
+          python - <<'EOF'
+          from PIL import Image, ImageDraw
+          im = Image.new("RGB", (300, 300), "white")
+          ImageDraw.Draw(im).ellipse((60, 60, 240, 240), outline="black", width=10)
+          im.save("drawing.png")
+          EOF
+          python -m sketcheffnet.predict drawing.png --checkpoint outputs/smoke/models/sketchnet_best.pth
+      - name: Inference benchmark (CPU)
+        run: python -m tools.benchmark_inference --threads 2

@@ -1,0 +1,78 @@
+============================================================
+RESNET18 PARAMETER ANALYSIS
+============================================================
+Total Parameters: 11,202,162
+Trainable Parameters: 11,202,162
+Frozen Parameters: 0
+Memory Usage:
+  Model Size: 42.73 MB (float32)
+  Training Memory (estimated): 85.47 MB
+============================================================
+LAYER-WISE PARAMETER COUNT
+============================================================
+conv1.weight                                    9,408 params
+bn1.weight                                         64 params
+bn1.bias                                           64 params
+layer1.0.conv1.weight                          36,864 params
+layer1.0.bn1.weight                                64 params
+layer1.0.bn1.bias                                  64 params
+layer1.0.conv2.weight                          36,864 params
+layer1.0.bn2.weight                                64 params
+layer1.0.bn2.bias                                  64 params
+layer1.1.conv1.weight                          36,864 params
+layer1.1.bn1.weight                                64 params
+layer1.1.bn1.bias                                  64 params
+layer1.1.conv2.weight                          36,864 params
+layer1.1.bn2.weight                                64 params
+layer1.1.bn2.bias                                  64 params
+layer2.0.conv1.weight                          73,728 params
+layer2.0.bn1.weight                               128 params
+layer2.0.bn1.bias                                 128 params
+layer2.0.conv2.weight                         147,456 params
+layer2.0.bn2.weight                               128 params
+layer2.0.bn2.bias                                 128 params
+layer2.0.downsample.0.weight                    8,192 params
+layer2.0.downsample.1.weight                      128 params
+layer2.0.downsample.1.bias                        128 params
+layer2.1.conv1.weight                         147,456 params
+layer2.1.bn1.weight                               128 params
+layer2.1.bn1.bias                                 128 params
+layer2.1.conv2.weight                         147,456 params
+layer2.1.bn2.weight                               128 params
+layer2.1.bn2.bias                                 128 params
+layer3.0.conv1.weight                         294,912 params
+layer3.0.bn1.weight                               256 params
+layer3.0.bn1.bias                                 256 params
+layer3.0.conv2.weight                         589,824 params
+layer3.0.bn2.weight                               256 params
+layer3.0.bn2.bias                                 256 params
+layer3.0.downsample.0.weight                   32,768 params
+layer3.0.downsample.1.weight                      256 params
+layer3.0.downsample.1.bias                        256 params
+layer3.1.conv1.weight                         589,824 params
+layer3.1.bn1.weight                               256 params
+layer3.1.bn1.bias                                 256 params
+layer3.1.conv2.weight                         589,824 params
+layer3.1.bn2.weight                               256 params
+layer3.1.bn2.bias                                 256 params
+layer4.0.conv1.weight                       1,179,648 params
+layer4.0.bn1.weight                               512 params
+layer4.0.bn1.bias                                 512 params
+layer4.0.conv2.weight                       2,359,296 params
+layer4.0.bn2.weight                               512 params
+layer4.0.bn2.bias                                 512 params
+layer4.0.downsample.0.weight                  131,072 params
+layer4.0.downsample.1.weight                      512 params
+layer4.0.downsample.1.bias                        512 params
+layer4.1.conv1.weight                       2,359,296 params
+layer4.1.bn1.weight                               512 params
+layer4.1.bn1.bias                                 512 params
+layer4.1.conv2.weight                       2,359,296 params
+layer4.1.bn2.weight                               512 params
+layer4.1.bn2.bias                                 512 params
+fc.weight                                      25,600 params
+fc.bias                                            50 params
+/usr/local/lib/python3.12/dist-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)

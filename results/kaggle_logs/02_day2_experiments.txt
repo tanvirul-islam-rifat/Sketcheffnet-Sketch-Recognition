@@ -1,0 +1,101 @@
+Using device: cuda
+==================================================
+Loading Processed Dataset
+==================================================
+Train: 70000, Val: 15000, Test: 15000
+Categories: 50
+============================================================
+EXPERIMENT 1: Few-Shot Learning Simulation
+============================================================
+--- Training with 10 samples per category ---
+Few-shot training samples: 500
+Epoch 5: Train Acc: 75.20%, Val Acc: 38.47%
+Epoch 10: Train Acc: 92.00%, Val Acc: 47.26%
+Epoch 15: Train Acc: 97.20%, Val Acc: 49.77%
+Results - Val Acc: 49.77%, Test Acc: 49.65%, Test F1: 48.92%
+--- Training with 50 samples per category ---
+Few-shot training samples: 2500
+Epoch 5: Train Acc: 72.24%, Val Acc: 59.97%
+Epoch 10: Train Acc: 81.92%, Val Acc: 62.50%
+Epoch 15: Train Acc: 88.88%, Val Acc: 66.43%
+Results - Val Acc: 66.43%, Test Acc: 65.73%, Test F1: 65.16%
+--- Training with 100 samples per category ---
+Few-shot training samples: 5000
+Epoch 5: Train Acc: 68.38%, Val Acc: 63.36%
+Epoch 10: Train Acc: 73.54%, Val Acc: 66.68%
+Epoch 15: Train Acc: 82.16%, Val Acc: 70.41%
+Results - Val Acc: 70.41%, Test Acc: 69.57%, Test F1: 69.69%
+--- Training with 500 samples per category ---
+Few-shot training samples: 25000
+Epoch 5: Train Acc: 76.92%, Val Acc: 76.01%
+Epoch 10: Train Acc: 81.86%, Val Acc: 78.09%
+Epoch 15: Train Acc: 85.02%, Val Acc: 78.13%
+Results - Val Acc: 78.39%, Test Acc: 78.10%, Test F1: 78.15%
+--- Training with 1000 samples per category ---
+Few-shot training samples: 50000
+Epoch 5: Train Acc: 78.69%, Val Acc: 79.55%
+Epoch 10: Train Acc: 82.66%, Val Acc: 80.47%
+Epoch 15: Train Acc: 85.29%, Val Acc: 80.73%
+Results - Val Acc: 80.99%, Test Acc: 80.25%, Test F1: 80.28%
+Few-shot learning results saved!
+============================================================
+EXPERIMENT 2: Sketch-Specific Data Augmentation
+============================================================
+--- Training with no_augmentation ---
+Epoch 5: Train Acc: 87.02%, Val Acc: 73.27%
+Epoch 10: Train Acc: 94.31%, Val Acc: 73.81%
+Epoch 15: Train Acc: 96.77%, Val Acc: 75.25%
+Results - Val Acc: 75.25%, Test Acc: 74.10%, Test F1: 74.20%
+--- Training with standard_augmentation ---
+Epoch 5: Train Acc: 76.81%, Val Acc: 75.91%
+Epoch 10: Train Acc: 81.89%, Val Acc: 77.99%
+Epoch 15: Train Acc: 84.34%, Val Acc: 79.31%
+Results - Val Acc: 79.31%, Test Acc: 78.62%, Test F1: 78.53%
+--- Training with sketch_specific_augmentation ---
+Epoch 5: Train Acc: 72.20%, Val Acc: 73.80%
+Epoch 10: Train Acc: 76.88%, Val Acc: 77.37%
+Epoch 15: Train Acc: 79.53%, Val Acc: 78.47%
+Results - Val Acc: 78.69%, Test Acc: 78.15%, Test F1: 78.14%
+Augmentation comparison results saved!
+============================================================
+EXPERIMENT 3: Transfer Learning Analysis
+============================================================
+Train categories (40): ['baseball', 'bridge', 'blackberry', 'bush', 'bat']...
+Test categories (10): ['banana', 'bed', 'bathtub', 'calculator', 'bear', 'arm', 'bucket', 'baseball bat', 'bird', 'bread']
+Transfer train: 56000
+Transfer val: 12000
+Transfer test: 3000
+Training on 40 categories...
+Epoch 5: Train Acc: 80.88%, Val Acc: 79.42%
+Epoch 10: Train Acc: 84.04%, Val Acc: 82.46%
+Epoch 15: Train Acc: 86.47%, Val Acc: 82.42%
+Best validation accuracy on 40 categories: 83.08%
+Extracting features for transfer learning analysis...
+Extracted features shape: (3000, 512)
+k-NN accuracy on unseen categories (using transferred features): 82.89%
+Generating t-SNE visualization...
+t-SNE visualization saved!
+==================================================
+Saving All Day 2 Results
+==================================================
+✓ Results saved to /kaggle/working/results/day2/day2_all_results.json
+============================================================
+DAY 2 SUMMARY REPORT
+============================================================
+1. FEW-SHOT LEARNING:
+   10 samples/category: Test Acc = 49.65%
+   50 samples/category: Test Acc = 65.73%
+   100 samples/category: Test Acc = 69.57%
+   500 samples/category: Test Acc = 78.10%
+   1000 samples/category: Test Acc = 80.25%
+2. AUGMENTATION STRATEGIES:
+   no_augmentation: Test Acc = 74.10%
+   standard_augmentation: Test Acc = 78.62%
+   sketch_specific_augmentation: Test Acc = 78.15%
+3. TRANSFER LEARNING:
+   Validation Acc (40 categories): 83.08%
+   k-NN Acc (10 unseen categories): 82.89%
+============================================================
+DAY 2 COMPLETED SUCCESSFULLY!
+============================================================
+All results saved to: /kaggle/working/results/day2

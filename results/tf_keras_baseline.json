@@ -1,0 +1,35 @@
+{
+  "status": "archived exploration - superseded by the PyTorch pipeline",
+  "protocol": "TensorFlow/Keras, 28x28 -> resized 128 (224 for Swin), 80/20 split used as validation, 7 epochs",
+  "models": [
+    {
+      "model": "MobileNetV3",
+      "final_val_accuracy": 67.66,
+      "parameters_millions": 1.099712
+    },
+    {
+      "model": "Attention_MobileNetV3",
+      "final_val_accuracy": 2.19,
+      "parameters_millions": 1.099811
+    },
+    {
+      "model": "ResNet50",
+      "final_val_accuracy": 80.47,
+      "parameters_millions": 24.125136
+    },
+    {
+      "model": "EfficientNetB0",
+      "final_val_accuracy": 9.53,
+      "parameters_millions": 4.390387
+    },
+    {
+      "model": "SwinTiny",
+      "final_val_accuracy": 1.82,
+      "parameters_millions": 27.729098
+    }
+  ],
+  "robustness_40pct_pixels_dropped": {
+    "vanilla": 4.01,
+    "attention": 1.57
+  }
+}

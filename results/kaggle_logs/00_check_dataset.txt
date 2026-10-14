@@ -1,0 +1,107 @@
+============================================================
+QuickDraw Dataset Verification
+============================================================
+✓ Directory found: /kaggle/input/quickdraw20/quickdraw_data
+📊 Total files in directory: 50
+📁 File breakdown:
+   .npy files: 50
+   .ndjson files: 0
+   Other files: 0
+✓ Found .npy files!
+📋 Sample .npy files (first 10):
+   - bandage.npy
+   - calculator.npy
+   - butterfly.npy
+   - bowtie.npy
+   - bench.npy
+   - axe.npy
+   - broccoli.npy
+   - basketball.npy
+   - arm.npy
+   - bulldozer.npy
+🔍 Analyzing file naming patterns...
+📝 Detected categories (first 10):
+   - bandage
+   - calculator
+   - butterfly
+   - bowtie
+   - bench
+   - axe
+   - broccoli
+   - basketball
+   - arm
+   - bulldozer
+🔬 Analyzing first .npy file structure...
+   File: bandage.npy
+   Shape: (147614, 784)
+   Dtype: uint8
+   Min value: 0
+   Max value: 255
+   ✓ Format looks correct!
+   ✓ Each row is a flattened 28x28 image (784 values)
+   ✓ Total samples in this category: 147614
+============================================================
+RECOMMENDED CATEGORIES LIST FOR YOUR CODE:
+============================================================
+CATEGORIES = [
+    'bandage',
+    'calculator',
+    'butterfly',
+    'bowtie',
+    'bench',
+    'axe',
+    'broccoli',
+    'basketball',
+    'arm',
+    'bulldozer',
+    'apple',
+    'bridge',
+    'ant',
+    'book',
+    'aircraft carrier',
+    'bottlecap',
+    'airplane',
+    'barn',
+    'bee',
+    'cactus',
+    'baseball',
+    'brain',
+    'alarm clock',
+    'bus',
+    'blackberry',
+    'ambulance',
+    'bucket',
+    'banana',
+    'beach',
+    'beard',
+    'bear',
+    'bracelet',
+    'bird',
+    'baseball bat',
+    'binoculars',
+    'basket',
+    'bat',
+    'belt',
+    'bathtub',
+    'blueberry',
+    'birthday cake',
+    'angel',
+    'bread',
+    'bicycle',
+    'boomerang',
+    'bed',
+    'bush',
+    'asparagus',
+    'broom',
+    'cake',
+]
+✓ You have 50 categories available
+✓ You can use up to 50 categories for your research
+============================================================
+Next Steps:
+============================================================
+1. Copy the CATEGORIES list printed above
+2. Update CATEGORIES in day1_setup_baseline.py
+3. Update DATA_DIR in day1_setup_baseline.py
+4. Run: python day1_setup_baseline.py
+============================================================

@@ -1,0 +1,83 @@
+{
+  "model": "ResNet18 (ImageNet-pretrained), Adam lr=0.001, 15 epochs, no scheduler",
+  "few_shot": {
+    "samples_per_class": [
+      10,
+      50,
+      100,
+      500,
+      1000
+    ],
+    "train_images": [
+      500,
+      2500,
+      5000,
+      25000,
+      50000
+    ],
+    "val_acc": [
+      49.77,
+      66.43,
+      70.41,
+      78.39,
+      80.99
+    ],
+    "test_acc": [
+      49.65,
+      65.73,
+      69.57,
+      78.1,
+      80.25
+    ],
+    "test_f1": [
+      48.92,
+      65.16,
+      69.69,
+      78.15,
+      80.28
+    ]
+  },
+  "augmentation": {
+    "strategy": [
+      "no_augmentation",
+      "standard_augmentation",
+      "sketch_specific_augmentation"
+    ],
+    "val_acc": [
+      75.25,
+      79.31,
+      78.69
+    ],
+    "test_acc": [
+      74.1,
+      78.62,
+      78.15
+    ],
+    "test_f1": [
+      74.2,
+      78.53,
+      78.14
+    ],
+    "samples_per_class": 500
+  },
+  "transfer": {
+    "train_categories": 40,
+    "unseen_categories": [
+      "banana",
+      "bed",
+      "bathtub",
+      "calculator",
+      "bear",
+      "arm",
+      "bucket",
+      "baseball bat",
+      "bird",
+      "bread"
+    ],
+    "best_val_acc_seen_40": 83.08,
+    "knn_acc_unseen_10": 82.89,
+    "feature_dim": 512,
+    "unseen_test_images": 3000,
+    "knn": "k=5, 70/30 split of the unseen-category features"
+  }
+}

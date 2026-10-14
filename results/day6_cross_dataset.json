@@ -1,0 +1,105 @@
+{
+  "target_dataset": "ImageNet-Sketch, first 50 WordNet IDs (n01440764 ...) - no label overlap with QuickDraw",
+  "images": 2548,
+  "split": {
+    "train": 1783,
+    "val": 382,
+    "test": 383
+  },
+  "chance_accuracy": 2.0,
+  "approaches": {
+    "Zero-Shot": {
+      "accuracy": 2.09,
+      "f1_weighted": 0.33,
+      "time_minutes": 0.0,
+      "train_images": 0
+    },
+    "Fine-Tuning": {
+      "accuracy": 7.83,
+      "f1_weighted": 4.5,
+      "time_minutes": 1.92,
+      "train_images": 1783
+    },
+    "From Scratch": {
+      "accuracy": 8.62,
+      "f1_weighted": 6.3,
+      "time_minutes": 3.69,
+      "train_images": 1783
+    }
+  },
+  "zero_shot_note": "the QuickDraw classifier head is discarded and a freshly initialised 50-way head is used, so this number measures a random head on top of QuickDraw features",
+  "history": {
+    "fine_tuning": {
+      "train_acc": [
+        2.3,
+        4.26,
+        5.72,
+        7.46,
+        8.3,
+        7.96,
+        9.25,
+        8.92,
+        9.37,
+        10.26
+      ],
+      "val_acc": [
+        3.14,
+        3.93,
+        4.45,
+        4.45,
+        5.24,
+        4.19,
+        4.97,
+        5.5,
+        7.85,
+        6.54
+      ]
+    },
+    "from_scratch": {
+      "train_acc": [
+        2.58,
+        5.33,
+        5.38,
+        7.12,
+        7.91,
+        7.46,
+        8.92,
+        9.37,
+        9.98,
+        12.56,
+        12.28,
+        12.28,
+        13.68,
+        16.04,
+        16.83,
+        16.21,
+        16.38,
+        18.4,
+        20.02,
+        18.9
+      ],
+      "val_acc": [
+        2.62,
+        3.14,
+        2.88,
+        3.4,
+        4.97,
+        3.66,
+        4.45,
+        4.45,
+        3.14,
+        7.59,
+        3.4,
+        6.54,
+        8.64,
+        6.54,
+        4.97,
+        6.02,
+        8.64,
+        4.45,
+        14.14,
+        9.42
+      ]
+    }
+  }
+}
